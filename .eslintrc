@@ -1,0 +1,27 @@
+{
+  "env": {
+    "browser": true
+  },
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+        "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "extends": ["airbnb"],
+  "rules": {
+    "react/function-component-definition": ["error", {
+      "namedComponents": [ "function-declaration", "function-expression", "arrow-function"],
+      "unnamedComponents": [ "function-expression", "arrow-function"]
+    }],
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+    "react/jsx-props-no-spreading": "off",
+    "react/forbid-prop-types": "off"
+  },
+  "overrides": [
+    {
+      "files": ["*.jsx", "*.js"]
+    }
+  ]
+}
